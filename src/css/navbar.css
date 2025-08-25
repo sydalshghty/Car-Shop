@@ -1,0 +1,44 @@
+.navbar-content{
+    width: 100%;
+   /* background-color: #fff;*/
+   margin-top: 20px;
+}
+.navbar-content .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.navbar-content .container .col-toyota,
+.navbar-content .container .col-kia,
+.navbar-content .container .col-huanta,
+.navbar-content .container .col-nissan,
+.navbar-content .container .col-Amg,
+.navbar-content .container .col-Chery{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 120px;
+    height: 40px;
+    background-color: #ede9e9;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.navbar-content .container .col-toyota img,
+.navbar-content .container .col-kia img,
+.navbar-content .container .col-huanta img,
+.navbar-content .container .col-nissan img,
+.navbar-content .container .col-Amg img,
+.navbar-content .container .col-Chery img{
+    width: 30px;
+}
+.navbar-content .container .col-toyota a,
+.navbar-content .container .col-kia a,
+.navbar-content .container .col-huanta a,
+.navbar-content .container .col-nissan a,
+.navbar-content .container .col-Amg a,
+.navbar-content .container .col-Chery a{
+    color: #B41B38;
+}

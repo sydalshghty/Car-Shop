@@ -1,0 +1,82 @@
+.header-departament{
+    width: 100%;
+    border-bottom: 2px solid #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.header-departament::before{
+    content: "";
+    position: absolute;
+    right: 280px;
+    bottom: -2px;
+    width: 100px;
+    height: 2px;
+    background-color: #B41B38;
+}
+.header-departament .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-departament .container .col-social-media{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+}
+.header-departament .container .col-social-media .col-link{
+    width: 25px;
+    height: 25px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.5s ease;
+    cursor: pointer;
+}
+.header-departament .container .col-social-media .col-link:hover{
+    border-color: #B41B38;
+}
+.header-departament .container .col-social-media .col-link:hover .icon-social{
+    color: #B41B38;
+}
+.header-departament .container .col-social-media .col-link .link{
+
+}
+.header-departament .container .col-social-media .col-link .icon-social{
+    font-size: 12px;
+    color: #fff;
+    transition: color 0.5s ease;
+}
+.header-departament .container .col-email-phone{
+    display: flex;
+    gap: 15px;
+}
+.header-departament .container .col-email-phone .col-email,
+.header-departament .container .col-email-phone .col-phone{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.header-departament .container .col-email-phone .col-email .link-email,
+.header-departament .container .col-email-phone .col-phone p{
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+}
+.header-departament .container .col-email-phone .col-email .email-icon,
+.header-departament .container .col-email-phone .col-phone .phone-icon{
+    color: #fff;
+    cursor: pointer;
+}
+.header-departament .container .col-email-phone .col-email .email-icon{
+
+}
+.header-departament .container .col-email-phone .col-phone p{
+    
+}
+.header-departament .container .col-email-phone .col-phone .phone-icon{
+
+}

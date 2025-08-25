@@ -1,0 +1,29 @@
+.navbar-Links{
+    margin-top: 40px;
+}
+ul{
+    flex-direction: row-reverse;
+}
+ul li a{
+    font-size: 20px;
+    font-weight: 300;
+}
+/*ul li a.active{
+    color: #B41B38;
+}*/
+.all-buttons button{
+    width: 140px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 17px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.all-buttons .login-btn{
+   /* background-color: #ffffff;*/
+    border: 1px solid #ffffff;
+    margin-right: 20px;
+}
+.all-buttons .register-btn{
+    background-color: #B41B38;
+}
