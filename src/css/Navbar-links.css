@@ -7,10 +7,11 @@ ul{
 ul li a{
     font-size: 20px;
     font-weight: 300;
+    transition: color 0.5s ease;
 }
-/*ul li a.active{
+ul li a:hover{
     color: #B41B38;
-}*/
+}
 .all-buttons button{
     width: 140px;
     height: 45px;
@@ -20,10 +21,58 @@ ul li a{
     cursor: pointer;
 }
 .all-buttons .login-btn{
-   /* background-color: #ffffff;*/
     border: 1px solid #ffffff;
     margin-right: 20px;
+    transition: background-color 0.5s ease;
+}
+.all-buttons .login-btn:hover{
+    background-color: #B41B38;
+    border: none;
 }
 .all-buttons .register-btn{
     background-color: #B41B38;
+    transition: background-color 0.5s ease;
+}
+.all-buttons .register-btn:hover{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+}
+@media (min-width: 1400px) {
+    .navbar-Links .container ul{
+        width: 70%;
+        justify-content: center;
+        gap: 50px;
+    }
+}
+@media (max-width: 1320px) {
+    .navbar-Links .container{
+        gap: 40px;
+    }
+    .navbar-Links .container ul{
+        gap: 50px;
+    }
+}
+@media (max-width: 1100px) {
+    .all-buttons .login-btn{
+        display: none;
+    }
+}
+@media (max-width: 950px) {
+    .all-buttons .register-btn{
+        display: none;
+    }
+    .navbar-Links .container ul{
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media (max-width: 800px) {
+    .navbar-Links .container ul{
+        gap: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-Links .container ul{
+        display: none;
+    }
 }

@@ -80,3 +80,45 @@
 .header-departament .container .col-email-phone .col-phone .phone-icon{
 
 }
+.header-departament .container .bars-icon{
+    color: #B41B38;
+    cursor: pointer;
+    font-size: 25px;
+}
+@media (min-width: 768px) {
+    .header-departament .container .bars-icon{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .header-departament .container .col-email-phone .col-email,
+    .header-departament .container .col-email-phone .col-phone{
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .header-departament .container .col-social-media .col-link{
+        width: 22px;
+        height: 22px;
+    }
+    .header-departament .container .col-social-media .col-link .icon-social{
+        font-size: 12px;
+    }
+    .header-departament::before{
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    .navbar-mobile{
+        display: none;
+    }
+}
+.navbar-mobile{
+    width: 0%;
+    background-color: #B41B38;
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+.navbar-mobile.show{
+    width: 70%;
+}
