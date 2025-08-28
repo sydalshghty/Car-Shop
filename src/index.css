@@ -20,11 +20,14 @@ ul{
     margin-left: auto;
     margin-right: auto;
     min-width: 100%;
-}
+}/*
 body {
   font-family: 'Poppins', sans-serif;
 }
-
+*/
+body {
+  font-family: 'Helvetica Neue Arabic', Helvetica, Arial, sans-serif;
+}
   
 /*Small*/
 @media (min-width: 768px){
