@@ -115,15 +115,8 @@
 .content-car:hover .contact-whatsap{
     height: 60px;
 }
-@media (max-width: 720px) {
-    .content-car{
-        min-width: 100% !important;
-    }
-}
-.all-cars-toyota {
-  width: 100% !important;
-}
 .all-cars-toyota .slick-slide {
   display: flex;
   justify-content: center;
 }
+

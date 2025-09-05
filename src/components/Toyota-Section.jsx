@@ -96,52 +96,53 @@ function ToyotaDepartament () {
                     {CarToyota.length === 0 ?
                         <h2>Loading Data...</h2>
                         :
-                        <Slider {...settings} ref={setSliderRef}>
-                            {CarToyota.map((product,index) => {
-                                return(
-                                <div className="content-car" key={product.id}>
-                                     <div className="content-images">
-                                        <img src={product.imgcar1} alt="Toyota" />
-                                     </div>
-                                    <div className="content-information-car">
-                                        <h2 className="text-xl text-mainColor font-semibold">{product.titlecar}</h2>
-                                        <div className="col-property">
-                                            <p>{product.property1}</p>
-                                            <p>{product.property2}</p>
-                                        <div>
-                                            <p>{product.property3}</p>
-                                            <p>كم/لتر</p>
+                        <div className="all-cars-content w-full overflow-hidden">
+                            <Slider {...settings} ref={setSliderRef}>
+                                {CarToyota.map((product,index) => {
+                                    return(
+                                    <div className="content-car" key={product.id}>
+                                        <div className="content-images">
+                                            <img src={product.imgcar1} alt="Toyota" />
                                         </div>
-                            </div>
-                            <div className="content-prices">
-                                <div className="old-price flex items-center">
-                                    <div className="flex gap-1 items-center">
-                                            <p className="text-lg text-mainColor font-semibold">ريال</p>
-                                            <p className="text-lg text-mainColor font-semibold p-old">{product.oldprice}</p>
-                                        </div>
-                                        <p>(شامل الضريبة)</p>
+                                        <div className="content-information-car">
+                                            <h2 className="text-xl text-mainColor font-semibold">{product.titlecar}</h2>
+                                            <div className="col-property">
+                                                <p>{product.property1}</p>
+                                                <p>{product.property2}</p>
+                                            <div>
+                                                <p>{product.property3}</p>
+                                                <p>كم/لتر</p>
+                                            </div>
                                 </div>
-                                <div className="new-price flex items-center">
+                                <div className="content-prices">
+                                    <div className="old-price flex items-center">
                                         <div className="flex gap-1 items-center">
-                                            <p className="text-lg text-mainColor font-semibold">ريال</p>
-                                            <p className="text-lg text-mainColor font-semibold">{product.newprice}</p>
+                                                <p className="text-lg text-mainColor font-semibold">ريال</p>
+                                                <p className="text-lg text-mainColor font-semibold p-old">{product.oldprice}</p>
+                                            </div>
+                                            <p>(شامل الضريبة)</p>
+                                    </div>
+                                    <div className="new-price flex items-center">
+                                            <div className="flex gap-1 items-center">
+                                                <p className="text-lg text-mainColor font-semibold">ريال</p>
+                                                <p className="text-lg text-mainColor font-semibold">{product.newprice}</p>
+                                            </div>
+                                            <p>(شامل الضريبة)</p>
+                                    </div>
+                                </div>
                                         </div>
-                                        <p>(شامل الضريبة)</p>
-                                </div>
-                            </div>
+                                        <div className="available-col">
+                                            <p>التمويل متاح</p>
+                                        </div>
+                                        <div className="contact-whatsap w-full h-16 bg-whattsappcolor flex justify-center items-center gap-4 cursor-pointer">
+                                            <TbBrandWhatsappFilled  className="text-white text-2xl"/>
+                                            <a href="#Whatsapp" className="text-lg text-white">واتساب</a>
+                                        </div>
                                     </div>
-                                    <div className="available-col">
-                                        <p>التمويل متاح</p>
-                                    </div>
-                                    <div className="contact-whatsap w-full h-16 bg-whattsappcolor flex justify-center items-center gap-4 cursor-pointer">
-                                        <TbBrandWhatsappFilled  className="text-white text-2xl"/>
-                                        <a href="#Whatsapp" className="text-lg text-white">واتساب</a>
-                                    </div>
-                                </div>
-                                )
-                            })}
-                        </Slider>
-                        
+                                    )
+                                })}
+                            </Slider>
+                        </div> 
                 }
                 </div>
                 <div className="col-btn mt-16 flex justify-center items-center">

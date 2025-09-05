@@ -8,9 +8,9 @@
             "imgcar4": "https://i.postimg.cc/WznFGGm9/l-1750244891-2022-68529e1b315db.webp",
             "imgcar5": "https://i.postimg.cc/Kvjvphmc/l-1750244888-1103-68529e181aee2.webp",
             "titlecar": "تويوتا كورولا اكس ال اي 1.5 2024",
-            "property1": "81,239 كم",
+            "property1": "81,239 KM",
             "property2": "أوتوماتيك ",
-            "property3": "19.60 كم/لتر",
+            "property3": "19.60",
             "oldprice": "69,000 ",
             "newprice": "67,229"
         },
@@ -22,9 +22,9 @@
             "imgcar4": "https://i.postimg.cc/nzSJbM1d/l-1751463560-1145-686536881bf39.webp",
             "imgcar5": "https://i.postimg.cc/J4ZzJcxM/l-1751463560-3782-686536885c54a.webp",
             "titlecar": "تويوتا كورولا اكس ال اي 2023",
-            "property1": "92,812 كم",
+            "property1": "92,812 KM",
             "property2": "أوتوماتيك ",
-            "property3": "19.30 كم/لتر",
+            "property3": "19.30",
             "oldprice": "63,595",
             "newprice": "61,869"
         },
@@ -38,7 +38,7 @@
             "titlecar": "تويوتا يارس واي ليمتد 1.3لتر 2026",
             "property1": "جديد",
             "property2": "أوتوماتيك ",
-            "property3": "22.10 كم/لتر",
+            "property3": "22.10",
             "oldprice": "69,940",
             "newprice": "67,850"
         },
@@ -52,7 +52,7 @@
             "titlecar": "تويوتا هايلاندر ال اي هايبرد 2025",
             "property1": "جديد",
             "property2": "أوتوماتيك ",
-            "property3": "20.70 كم/لتر",
+            "property3": "20.70",
             "oldprice": "151,455",
             "newprice": "144,900"
         },
@@ -66,7 +66,7 @@
             "titlecar": "تويوتا فيلوز جي ال اكس 2025",
             "property1": "جديد",
             "property2": "أوتوماتيك ",
-            "property3": "19.30 كم/لتر",
+            "property3": "19.30",
             "oldprice": "85,100",
             "newprice": "81,995"
         }
