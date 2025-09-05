@@ -120,3 +120,31 @@
   justify-content: center;
 }
 
+/* الجزء الخاص بالموبايل */
+@media (max-width: 768px) {
+  .all-cars-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* يخليهم في النص */
+    gap: 20px;
+  }
+
+  .all-cars-content .content-car {
+    width: 90%;
+    max-width: 350px; /* حد أقصى للعرض */
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .col-btn button{
+        width: 180px;
+        height: 50px;
+}
+.Toyota-departament{
+    margin-top: 0px;
+}
+.Toyota-departament .container{
+    border-bottom: none;
+}
+}
+
+

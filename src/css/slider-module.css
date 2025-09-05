@@ -106,3 +106,8 @@
     height: 40px !important;
   }
 }
+@media (max-width: 768px) {
+  .all-modules-cars{
+    display: none;
+  }
+}
