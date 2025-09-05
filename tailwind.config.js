@@ -6,14 +6,13 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        helveticaArabic: ['Helvetica Neue Arabic', 'Helvetica', 'Arial', 'sans-serif'], 
-      },
       colors: {
-        maincolor: '#B41B38', 
-      },
+        mainColor: "#B41B38",
+        whattsappcolor: "#00c49b",
+        secondcolor: "#ddfff8",
+      }
     },
   },
   plugins: [],
 }
+

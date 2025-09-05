@@ -6,22 +6,22 @@ function NavbarMobile () {
             <div className="container absolute left-0 z-50">
                 <ul>
                     <li>
-                        <a href="#" className="text-2xl text-white active">الرئيسية</a>
+                        <a href="#" className="text-xl text-white active">الرئيسية</a>
                     </li>
                     <li>
-                        <a href="#" className="text-2xl text-white">كيفية الاستخدام ؟</a>
+                        <a href="#" className="text-xl text-white link-two">كيفية الاستخدام ؟</a>
                     </li>
                     <li>
-                        <a href="#" className="text-2xl text-white">العروض</a>
+                        <a href="#" className="text-xl text-white">العروض</a>
                     </li>
                     <li>
-                        <a href="#" className="text-2xl text-white">تقديم طلب</a>
+                        <a href="#" className="text-xl text-white">تقديم طلب</a>
                     </li>
                     <li>
-                        <a href="#" className="text-2xl text-white">ماذا عنا</a>
+                        <a href="#" className="text-xl text-white">ماذا عنا</a>
                     </li>
                     <li>
-                        <a href="#" className="text-2xl text-white">تواصل معنا</a>
+                        <a href="#" className="text-xl text-white">تواصل معنا</a>
                     </li>
                 </ul>
             </div>

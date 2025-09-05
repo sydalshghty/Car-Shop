@@ -10,7 +10,8 @@ import Header from "./header";
 import NavbarLinks from "./Navbar-links";
 
 function Slider() {
-  const images = [sliderimg2, sliderimg6, sliderimg1, sliderimg8];
+
+  const images = [sliderimg2, sliderimg6, sliderimg8];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 

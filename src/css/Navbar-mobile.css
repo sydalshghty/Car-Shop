@@ -1,23 +1,37 @@
-.navbar-mobile{
+/*.navbar-mobile{
     
 }
 .navbar-mobile .container{
     
-}
+}*/
+
 .navbar-mobile ul{
-    text-align: center;
+    /*text-align: center;*/
     margin-top: 60px;
-    color: white;
-    z-index: 10000;
+    width: 100%;
+    padding-left: 60px auto;
+    padding-right: 60px auto;
 }
 .navbar-mobile ul li{
     padding-top: 5px;
     padding-bottom: 5px;
     margin-bottom: 15px;
+    width: 100%;
+    padding-left: 60px auto;
+    padding-right: 60px auto;
 }
 .navbar-mobile ul li a{
-
+    position: relative;
+    z-index: 555555555555555;
+    color: white !important;
+    width: 100%;
+    padding-left: 60px auto;
+    padding-right: 60px auto;
 }
+.navbar-mobile ul li a:hover{
+    color: white;
+}
+*/
 .navbar-mobile ul li a:hover{
     color: white;
 }

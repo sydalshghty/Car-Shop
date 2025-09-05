@@ -1,0 +1,108 @@
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.slick-slider .slick-list {
+  overflow: hidden !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none !important;
+  content: "" !important;
+}
+
+.slick-slide {
+  box-shadow: none !important;
+}
+.all-modules-cars{
+    margin-bottom: 40px;
+    margin-top: 40px;
+    height: 400px;
+    overflow: hidden;
+}
+/*.slider{
+  margin-right: -100px;
+}*/
+@media (max-width: 1550px) {
+  .slider{
+    margin-right: -30px;
+  }
+}
+@media (max-width: 1300px) {
+  .slider{
+    margin-right: -60px;
+  }
+}
+.all-modules-cars .container{
+    width: 100%;
+    height: fit-content !important;
+   /* border-top: 1px solid #B41B38;
+    border-bottom: 1px solid #B41B38;*/
+}
+.all-modules-cars .container .col-module{
+    display: flex !important;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 180px !important;
+    height: 60px !important;
+    background-color: #f6f6f6;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.all-modules-cars .container .col-module img{
+    width: 50px !important;
+    height: 50px !important;
+}
+.all-modules-cars .container .col-module p{
+
+}
+.content-slider{
+  padding: 40px 0px;
+  border-top: 1px solid #B41B38;
+  border-bottom: 1px solid #B41B38;
+}
+.all-buttons{
+  width: 100%;
+  gap: 15px;
+}
+.col-icon{
+  width: 40px;
+  height: 40px;
+  background: #B41B38;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f6f6f6;
+  font-size: 16px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .all-buttons{
+    margin-top: -10px;
+  }
+  .col-icon{
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 520px) {
+  .all-modules-cars{
+    margin-top: 0px;
+  }
+  .all-modules-cars .container .col-module{
+    width: 140px !important;
+    height: 50px !important;
+  }
+  .all-modules-cars .container .col-module img{
+    width: 40px !important;
+    height: 40px !important;
+  }
+}

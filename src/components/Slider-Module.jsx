@@ -5,85 +5,116 @@ import NissanImg from "../assets/l-1669878674.042-638853920a43c.webp";
 import AMGImg from "../assets/l-1669878687.1593-6388539f26e4e.webp";
 import CheryImg from "../assets/l-1678610317.8179-640d8f8dc7acf.webp";
 import ShafrlyImg from "../assets/l-1669878861.6257-6388544d98c1d.webp";
-import "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import "../css/slider-module.css";
+import "@fortawesome/react-fontawesome";
+import "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 function SliderModuleCars () {
-     const  settings = {
-        infinite: true,
-        slidesToShow: 7,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnHover: true,
-        speed: 500,
-      responsive: [
+
+  const settings = {
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    speed: 500,
+    arrows: false,
+    responsive: [
       {
-        breakpoint: 1350, 
+        breakpoint: 1550,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 992,
         settings: {
           slidesToShow: 3,
         },
-        },
-        {
-          breakpoint: 1100,
-          settings: {
-              slidesToShow: 2
-            },
       },
       {
-        breakpoint: 768,
+        breakpoint: 700,
         settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1, 
+          slidesToShow: 2,
         },
       },
     ],
   };
 
-    return(
-        <div className="all-modules-cars">
-            <div className="container">
-                <div className="slider-modules">
-                    <Slider {...settings}>
-                        <div className="col-module">
-                            <img src={ToyotaImg} alt="Toyota" />
-                            <p>تويوتا</p>
-                        </div>
-                        <div className="col-module">
-                            <img src={KIAImg} alt="KIA" />
-                            <p>كيا</p>
-                        </div>
-                        <div className="col-module">
-                            <img src={HuantyImg} alt="Huanty" />
-                            <p>هيونداي</p>
-                        </div>
-                        <div className="col-module">
-                            <img src={NissanImg} alt="Nissan" />
-                            <p>نيسان</p>
-                        </div>
-                        <div className="col-module">
-                            <img src={AMGImg} alt="Amg" />
-                            <p>ام جي</p>
-                        </div>
-                        <div className="col-module">
-                            <img src={CheryImg} alt="Chery" />
-                            <p>شيري</p>
-                        </div>
-                        <div className="col-module">
-                            <img src={ShafrlyImg} alt="Shafrly" />
-                            <p>شفروليه</p>
-                        </div>
-                    </Slider>
-                </div>
+   const [sliderRef, setSliderRef] = useState(null);
+
+    const goToPrev = () => {
+      if (sliderRef) {
+        sliderRef.slickPrev(); 
+      }
+    };
+
+  const goToNext = () => {
+      if (sliderRef) {
+        sliderRef.slickNext();
+      }
+    };
+
+  return (
+    <div className="all-modules-cars">
+      <div className="container">
+        <div className="content-slider">
+          <div className="all-buttons flex items-end justify-end">
+            <div className="col-icon" onClick={goToPrev}> 
+              <FontAwesomeIcon icon={faArrowLeft}/>
             </div>
+            <div className="col-icon" onClick={goToNext}>
+              <FontAwesomeIcon icon={faArrowRight} />
+            </div>
+          </div>
+          <Slider {...settings} className="slider" ref={setSliderRef}>
+            <a href="#Toyota-departament">
+              <div className="col-module">
+                <img src={ToyotaImg} alt="Toyota" />
+                <p>تويوتا</p>
+              </div>
+            </a>
+            <div className="col-module">
+              <img src={ShafrlyImg} alt="Shafrly" />
+              <p>شفروليه</p>
+            </div>
+            <div className="col-module">
+              <img src={CheryImg} alt="Chery" />
+              <p>شيري</p>
+            </div>
+            <div className="col-module">
+              <img src={AMGImg} alt="Amg" />
+              <p>ام جي</p>
+            </div>
+            <div className="col-module">
+              <img src={NissanImg} alt="Nissan" />
+              <p>نيسان</p>
+            </div>
+            <div className="col-module">
+              <img src={HuantyImg} alt="Huanty" />
+              <p>هيونداي</p>
+            </div>
+            <div className="col-module">
+              <img src={KIAImg} alt="KIA" />
+              <p>كيا</p>
+            </div>
+          </Slider>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
+
 export default SliderModuleCars;

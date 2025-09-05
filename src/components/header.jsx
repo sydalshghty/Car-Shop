@@ -12,6 +12,9 @@ import { FaBars } from "react-icons/fa6";
 import NavbarMobile from "./navbar-mobile";
 import { useState } from "react";
 import { FaXmark } from "react-icons/fa6";
+import { FaSnapchat } from "react-icons/fa6";
+
+
 function Header() {
     const [ showNav, setshowNav ] = useState(true);
 
@@ -48,6 +51,11 @@ function Header() {
                         <div className="col-link">
                             <Link to={"#"} className="link">
                                 <FaInstagram  className="icon-social"/>
+                            </Link>
+                        </div>
+                        <div className="col-link">
+                            <Link to={"#"} className="link">
+                                <FaSnapchat  className="icon-social"/>
                             </Link>
                         </div>
                     </div>

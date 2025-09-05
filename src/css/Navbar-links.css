@@ -1,24 +1,11 @@
-.navbar-Links{
-    margin-top: 40px;
-}
 ul{
     flex-direction: row-reverse;
 }
 ul li a{
-    font-size: 20px;
-    font-weight: 300;
     transition: color 0.5s ease;
 }
 ul li a:hover{
     color: #B41B38;
-}
-.all-buttons button{
-    width: 140px;
-    height: 45px;
-    border-radius: 10px;
-    font-size: 17px;
-    color: #ffffff;
-    cursor: pointer;
 }
 .all-buttons .login-btn{
     border: 1px solid #ffffff;
@@ -37,19 +24,9 @@ ul li a:hover{
     background-color: transparent;
     border: 1px solid #ffffff;
 }
-@media (min-width: 1400px) {
-    .navbar-Links .container ul{
-        width: 70%;
-        justify-content: center;
-        gap: 50px;
-    }
-}
-@media (max-width: 1320px) {
-    .navbar-Links .container{
-        gap: 40px;
-    }
-    .navbar-Links .container ul{
-        gap: 50px;
+@media (max-width: 1300px) {
+    ul{
+        width: 2000px !important;
     }
 }
 @media (max-width: 1100px) {
@@ -62,8 +39,13 @@ ul li a:hover{
         display: none;
     }
     .navbar-Links .container ul{
-        width: 100%;
+        position: absolute;
+        width: 100% !important;
         justify-content: center;
+        right: 0;
+        gap: 40px;
+        margin-top: 40px;
+        z-index: 1;
     }
 }
 @media (max-width: 800px) {
