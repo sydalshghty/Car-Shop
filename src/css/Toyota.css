@@ -117,6 +117,13 @@
 }
 @media (max-width: 720px) {
     .content-car{
-        min-width: 100%;
+        min-width: 100% !important;
     }
+}
+.all-cars-toyota {
+  width: 100% !important;
+}
+.all-cars-toyota .slick-slide {
+  display: flex;
+  justify-content: center;
 }

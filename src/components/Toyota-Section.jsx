@@ -6,10 +6,25 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { TbBrandWhatsappFilled } from "react-icons/tb";
 
+
 function ToyotaDepartament () {
+    
+    const [CarToyota,setCarToyota] = useState([]);
+
+    useEffect(  () => {
+         fetch("Toyota.json")
+
+        .then((res) => res.json())
+
+        .then((data) => setCarToyota(data.ToyotaCars));
+
+    }, []);
+
+    console.log(CarToyota);
+
      const  settings = {
         infinite: true,
         slidesToShow: 4,
@@ -78,203 +93,56 @@ function ToyotaDepartament () {
                     </div>
                 </div>
                 <div className="all-cars-toyota w-full mt-6 mr-7">
-                <Slider {...settings} ref={setSliderRef} >
-                    <div className="content-car">
-                        <div className="content-images">
-                            <img src="https://s3.eu-central-1.amazonaws.com/v3-cfs.motory.com/vehicle-used/l-1753095623.6152-687e1dc796336.webp" alt="Toyota" />
-                        </div>
-                        <div className="content-information-car">
-                            <h2 className="text-xl text-mainColor font-semibold">تويوتا هايلاندر ال اي هايبرد 2025</h2>
-                            <div className="col-property">
-                                <p>جديد</p>
-                                <p>أوتوماتيك</p>
-                                <div>
-                                    <p>20.70</p>
-                                    <p>كم/لتر</p>
-                                </div>
+                    {CarToyota.length === 0 ?
+                        <h2>Loading Data...</h2>
+                        :
+                        <Slider {...settings} ref={setSliderRef}>
+                            {CarToyota.map((product,index) => {
+                                return(
+                                <div className="content-car" key={product.id}>
+                                     <div className="content-images">
+                                        <img src={product.imgcar1} alt="Toyota" />
+                                     </div>
+                                    <div className="content-information-car">
+                                        <h2 className="text-xl text-mainColor font-semibold">{product.titlecar}</h2>
+                                        <div className="col-property">
+                                            <p>{product.property1}</p>
+                                            <p>{product.property2}</p>
+                                        <div>
+                                            <p>{product.property3}</p>
+                                            <p>كم/لتر</p>
+                                        </div>
                             </div>
                             <div className="content-prices">
                                 <div className="old-price flex items-center">
                                     <div className="flex gap-1 items-center">
                                             <p className="text-lg text-mainColor font-semibold">ريال</p>
-                                            <p className="text-lg text-mainColor font-semibold p-old"> 151,900</p>
+                                            <p className="text-lg text-mainColor font-semibold p-old">{product.oldprice}</p>
                                         </div>
                                         <p>(شامل الضريبة)</p>
                                 </div>
                                 <div className="new-price flex items-center">
                                         <div className="flex gap-1 items-center">
                                             <p className="text-lg text-mainColor font-semibold">ريال</p>
-                                            <p className="text-lg text-mainColor font-semibold"> 144,900</p>
+                                            <p className="text-lg text-mainColor font-semibold">{product.newprice}</p>
                                         </div>
                                         <p>(شامل الضريبة)</p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="available-col">
-                            <p>التمويل متاح</p>
-                        </div>
-                        <div className="contact-whatsap w-full h-16 bg-whattsappcolor flex justify-center items-center gap-4 cursor-pointer">
-                            <TbBrandWhatsappFilled  className="text-white text-2xl"/>
-                            <a href="#Whatsapp" className="text-lg text-white">واتساب</a>
-                        </div>
-                    </div>
-                    <div className="content-car">
-                        <div className="content-images">
-                            <img src="https://i.postimg.cc/yY4vvsmc/l-1750244890-6079-68529e1a94684.webp" alt="Toyota" />
-                        </div>
-                        <div className="content-information-car">
-                            <h2 className="text-xl text-mainColor font-semibold">تويوتا كورولا اكس ال اي 1.5 2024</h2>
-                            <div className="col-property">
-                                <p>81,239 KM</p>
-                                <p>أوتوماتيك</p>
-                                <div>
-                                    <p>19.60</p>
-                                    <p>كم/لتر</p>
+                                    </div>
+                                    <div className="available-col">
+                                        <p>التمويل متاح</p>
+                                    </div>
+                                    <div className="contact-whatsap w-full h-16 bg-whattsappcolor flex justify-center items-center gap-4 cursor-pointer">
+                                        <TbBrandWhatsappFilled  className="text-white text-2xl"/>
+                                        <a href="#Whatsapp" className="text-lg text-white">واتساب</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="content-prices">
-                                <div className="old-price flex items-center">
-                                    <div className="flex gap-1 items-center">
-                                            <p className="text-lg text-mainColor font-semibold">ريال</p>
-                                            <p className="text-lg text-mainColor font-semibold p-old"> 69.000</p>
-                                        </div>
-                                        <p>(شامل الضريبة)</p>
-                                </div>
-                                <div className="new-price flex items-center">
-                                        <div className="flex gap-1 items-center">
-                                            <p className="text-lg text-mainColor font-semibold">ريال</p>
-                                            <p className="text-lg text-mainColor font-semibold"> 67.299</p>
-                                        </div>
-                                        <p>(شامل الضريبة)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="available-col">
-                            <p>التمويل متاح</p>
-                        </div>
-                        <div className="contact-whatsap w-full h-16 bg-whattsappcolor flex justify-center items-center gap-4 cursor-pointer">
-                            <TbBrandWhatsappFilled  className="text-white text-2xl"/>
-                            <a href="#Whatsapp" className="text-lg text-white">واتساب</a>
-                        </div>
-                    </div>
-                    <div className="content-car">
-                        <div className="content-images">
-                            <img src="https://i.postimg.cc/tT92p5gk/l-1754901468-9339-6899abdce4027.webp" alt="Toyota" />
-                        </div>
-                        <div className="content-information-car">
-                            <h2 className="text-xl text-mainColor font-semibold">تويوتا يارس واي ليمتد 1.3لتر 2026</h2>
-                            <div className="col-property">
-                                <p>جديد</p>
-                                <p>أوتوماتيك</p>
-                                <div>
-                                    <p>22ز10</p>
-                                    <p>كم/لتر</p>
-                                </div>
-                            </div>
-                            <div className="content-prices">
-                                <div className="old-price flex items-center">
-                                    <div className="flex gap-1 items-center">
-                                            <p className="text-lg text-mainColor font-semibold">ريال</p>
-                                            <p className="text-lg text-mainColor font-semibold p-old">69.940</p>
-                                        </div>
-                                        <p>(شامل الضريبة)</p>
-                                </div>
-                                <div className="new-price flex items-center">
-                                        <div className="flex gap-1 items-center">
-                                            <p className="text-lg text-mainColor font-semibold">ريال</p>
-                                            <p className="text-lg text-mainColor font-semibold">67.850</p>
-                                        </div>
-                                        <p>(شامل الضريبة)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="available-col">
-                            <p>التمويل متاح</p>
-                        </div>
-                        <div className="contact-whatsap w-full h-16 bg-whattsappcolor flex justify-center items-center gap-4 cursor-pointer">
-                            <TbBrandWhatsappFilled  className="text-white text-2xl"/>
-                            <a href="#Whatsapp" className="text-lg text-white">واتساب</a>
-                        </div>
-                    </div>
-                    <div className="content-car">
-                        <div className="content-images">
-                            <img src="https://i.postimg.cc/cCF140NH/l-1753004387-1929-687cb9632f190.webp" alt="Toyota" />
-                        </div>
-                        <div className="content-information-car">
-                            <h2 className="text-xl text-mainColor font-semibold">تويوتا هايلاندر ال اي هايبرد 2025</h2>
-                            <div className="col-property">
-                                <p>جديد</p>
-                                <p>أوتوماتيك</p>
-                                <div>
-                                    <p>20.70</p>
-                                    <p>كم/لتر</p>
-                                </div>
-                            </div>
-                            <div className="content-prices">
-                                <div className="old-price flex items-center">
-                                    <div className="flex gap-1 items-center">
-                                            <p className="text-lg text-mainColor font-semibold">ريال</p>
-                                            <p className="text-lg text-mainColor font-semibold p-old"> 151,900</p>
-                                        </div>
-                                        <p>(شامل الضريبة)</p>
-                                </div>
-                                <div className="new-price flex items-center">
-                                        <div className="flex gap-1 items-center">
-                                            <p className="text-lg text-mainColor font-semibold">ريال</p>
-                                            <p className="text-lg text-mainColor font-semibold"> 144,900</p>
-                                        </div>
-                                        <p>(شامل الضريبة)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="available-col">
-                            <p>التمويل متاح</p>
-                        </div>
-                        <div className="contact-whatsap w-full h-16 bg-whattsappcolor flex justify-center items-center gap-4 cursor-pointer">
-                            <TbBrandWhatsappFilled  className="text-white text-2xl"/>
-                            <a href="#Whatsapp" className="text-lg text-white">واتساب</a>
-                        </div>
-                    </div>
-                    <div className="content-car">
-                        <div className="content-images">
-                            <img src="https://i.postimg.cc/SNzNp0vy/l-1744006919-046-67f36f070b3ce.webp" alt="Toyota" />
-                        </div>
-                        <div className="content-information-car">
-                            <h2 className="text-xl text-mainColor font-semibold">تويوتا فيلوز جي ال اكس 2025</h2>
-                            <div className="col-property">
-                                <p>جديد</p>
-                                <p>أوتوماتيك</p>
-                                <div>
-                                    <p>19.30</p>
-                                    <p>كم/لتر</p>
-                                </div>
-                            </div>
-                            <div className="content-prices">
-                                <div className="old-price flex items-center">
-                                    <div className="flex gap-1 items-center">
-                                            <p className="text-lg text-mainColor font-semibold">ريال</p>
-                                            <p className="text-lg text-mainColor font-semibold p-old">85.100</p>
-                                        </div>
-                                        <p>(شامل الضريبة)</p>
-                                </div>
-                                <div className="new-price flex items-center">
-                                        <div className="flex gap-1 items-center">
-                                            <p className="text-lg text-mainColor font-semibold">ريال</p>
-                                            <p className="text-lg text-mainColor font-semibold">81.995</p>
-                                        </div>
-                                        <p>(شامل الضريبة)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="available-col">
-                            <p>التمويل متاح</p>
-                        </div>
-                        <div className="contact-whatsap w-full h-16 bg-whattsappcolor flex justify-center items-center gap-4 cursor-pointer">
-                            <TbBrandWhatsappFilled  className="text-white text-2xl"/>
-                            <a href="#Whatsapp" className="text-lg text-white">واتساب</a>
-                        </div>
-                    </div>
-                </Slider>
+                                )
+                            })}
+                        </Slider>
+                        
+                }
                 </div>
                 <div className="col-btn mt-16 flex justify-center items-center">
                     <button className="w-52 h-16 bg-mainColor rounded-lg text-white text-lg border-none outline-none">عرض المزيد</button>
